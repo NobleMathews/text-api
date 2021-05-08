@@ -1,0 +1,12 @@
+{
+    "extends": "@tsconfig/node12/tsconfig.json",
+    "include": [
+        "src/**/*", "build/features/classifier.js",
+    ],
+    "exclude": [
+        "src/**/*.test.ts"
+    ],
+    "compilerOptions": {
+        "outDir": "build",
+    }
+}

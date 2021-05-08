@@ -1,0 +1,36 @@
+{
+    "name": "text-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./build/main.js",
+    "scripts": {
+        "lint": "eslint ./src --fix",
+        "build": "tsc",
+        "start": "node ./build/main.js"
+    },
+    "author": "Noble",
+    "devDependencies": {
+        "@tsconfig/node12": "^1.0.7",
+        "@types/jest": "^26.0.14",
+        "@types/node": "^14.11.1",
+        "@typescript-eslint/eslint-plugin": "^4.1.1",
+        "@typescript-eslint/parser": "^4.1.1",
+        "eslint": "^7.9.0",
+        "jest": "^26.4.2",
+        "ts-jest": "^26.3.0",
+        "typescript": "^4.0.3"
+    },
+    "dependencies": {
+        "deasync": "^0.1.21",
+        "fastify": "^3.4.1",
+        "fs": "0.0.1-security",
+        "natural": "^5.0.3",
+        "nlcst-to-string": "^3.0.1",
+        "retext": "^7.0.1",
+        "retext-keywords": "^6.0.0",
+        "retext-pos": "^3.0.0"
+    },
+    "engines": {
+        "node": "14.15.4"
+    }
+}
