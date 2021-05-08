@@ -4,7 +4,7 @@ import categoriser from "../features/categoriser";
 import keywords from "../features/keywords";
 
 const server = Fastify();
-Fastify().register(require('fastify-cors'), { 
+server.register(require('fastify-cors'), { 
     origin: (origin: string, cb: any) => {
         if(true){
             // /localhost/.test(origin)
