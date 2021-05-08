@@ -55,7 +55,7 @@ const classifier_text = function ( text: string ) {
         JSON.parse(fs.readFileSync(path.resolve(__dirname, "stopwords.json"))),
         0.00001
     );
-    return( "Category for given text is " + category );
+    return( category );
 };
 
 export default (input: string) =>
