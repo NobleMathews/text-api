@@ -8,14 +8,14 @@ server.register(require('fastify-cors'), {
     origin: (origin: string, cb: any) => {
         if(true){
             // /localhost/.test(origin)
-          //  Request from localhost will pass
-          cb(null, true)
-          return
+            //  Request from localhost will pass
+            cb(null, true);
+            return;
         }
         // Generate an error on other origins, disabling access
-        cb(new Error("Not allowed"))
-      }
-})
+        cb(new Error("Not allowed"));
+    }
+});
 server.setNotFoundHandler(
     async (req, reply) => {
         reply.code(404);
