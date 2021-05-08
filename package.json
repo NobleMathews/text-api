@@ -25,6 +25,7 @@
     "dependencies": {
         "deasync": "^0.1.21",
         "fastify": "^3.4.1",
+        "fastify-cors": "^6.0.1",
         "fs": "0.0.1-security",
         "natural": "^5.0.3",
         "nlcst-to-string": "^3.0.1",

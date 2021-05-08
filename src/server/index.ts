@@ -4,7 +4,18 @@ import categoriser from "../features/categoriser";
 import keywords from "../features/keywords";
 
 const server = Fastify();
-
+Fastify().register(require('fastify-cors'), { 
+    origin: (origin: string, cb: any) => {
+        if(true){
+            // /localhost/.test(origin)
+          //  Request from localhost will pass
+          cb(null, true)
+          return
+        }
+        // Generate an error on other origins, disabling access
+        cb(new Error("Not allowed"))
+      }
+})
 server.setNotFoundHandler(
     async (req, reply) => {
         reply.code(404);
