@@ -6,7 +6,7 @@
     "scripts": {
         "lint": "eslint ./src --fix",
         "build": "tsc",
-        "postbuild": "copyfiles -u 1 src/features/*.json build/features",
+        "postbuild": "copyfiles -u 1 src/features/*.json build/",
         "start": "node ./build/main.js"
     },
     "author": "Noble",
