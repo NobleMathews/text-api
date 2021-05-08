@@ -6,6 +6,7 @@
     "scripts": {
         "lint": "eslint ./src --fix",
         "build": "tsc",
+        "postbuild": "copyfiles -u 1 src/features/*.json build/features",
         "start": "node ./build/main.js"
     },
     "author": "Noble",
@@ -15,6 +16,7 @@
         "@types/node": "^14.11.1",
         "@typescript-eslint/eslint-plugin": "^4.1.1",
         "@typescript-eslint/parser": "^4.1.1",
+        "copyfiles": "^2.4.1",
         "eslint": "^7.9.0",
         "jest": "^26.4.2",
         "ts-jest": "^26.3.0",
