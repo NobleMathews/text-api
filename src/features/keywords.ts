@@ -60,21 +60,22 @@ function done(file: any) {
 
 export default (input: string) =>
 
-{if(input.length > 0){
+{
     // retext()
     //     .use(pos) // Make sure to use `retext-pos` before `retext-keywords`.
     //     .use(keywords)
     //     .process(input.trim(), done);
     ret = null;
-    request({uri:input.trim()}, 
-    function(error:any, response:any, body:any) {
-    if (error) return [];
-    analyze({url:input.trim(),"body":body}).then(function(result: any){done(result);})
-    });
+    // request({uri:input.trim()}, 
+    // function(error:any, response:any, body:any) {
+    // if (error) return [];
+    analyze({url:"https://www.google.co.in","body":`<html><head></head><body>${input}</body></html>`}).then(function(result: any){done(result);})
+    .catch((e:any)=>{ret=[`${e}`];})
+    // });
     while(ret == null)
     {
         deasync.runLoopOnce();
     }
     return (ret || []);
-}
+
 };
