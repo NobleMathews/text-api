@@ -70,7 +70,7 @@ export default (input: string) =>
     // function(error:any, response:any, body:any) {
     // if (error) return [];
     analyze({url:"https://www.google.co.in","body":`<html><head></head><body>${input}</body></html>`}).then(function(result: any){done(result);})
-    .catch((e:any)=>{ret=[`${e}`];})
+        .catch((e:any)=>{ret=[`${e}`];});
     // });
     while(ret == null)
     {
