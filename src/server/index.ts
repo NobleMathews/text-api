@@ -23,7 +23,7 @@ server.setNotFoundHandler(
     }
 );
 
-server.post<{ Body: { text: string, url:string } }>(
+server.post<{ Body: { text: string } }>(
     "*",
     {
         schema: {
@@ -32,28 +32,19 @@ server.post<{ Body: { text: string, url:string } }>(
                 additionalProperties: false,
                 required: ["text"],
                 properties: {
-                    text: { type: "string" },
-                    url: {type: "string" }
+                    text: { type: "string" }
                 }
             }
         }
     },
     async (request) => {
 
-        let { text,url } = request.body;
-        let keyworda:Array<string> = await keywords(url);
-        if(keyworda?.length>=1){
-            return {
-                keywords: keyworda,
-                categoriser: categoriser(keyworda.join(" ")),
-            };
-        }
-        else{
-            return {
-                keywords: ["error"],
-                categoriser: categoriser(text),
-            };
-        }
+        const { text } = request.body;
+        
+        return {
+            keywords: keywords(text),
+            categoriser: categoriser(text),
+        };
 
     }
 );

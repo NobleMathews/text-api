@@ -28,7 +28,10 @@
         "fastify-cors": "^6.0.1",
         "fs": "0.0.1-security",
         "natural": "^5.0.3",
-        "schenkerian": "^0.17.2"
+        "nlcst-to-string": "^3.0.1",
+        "retext": "^7.0.1",
+        "retext-keywords": "^6.0.0",
+        "retext-pos": "^3.0.0"
     },
     "engines": {
         "node": "14.15.4"
