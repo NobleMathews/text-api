@@ -3,8 +3,8 @@
 // const keywords = require("retext-keywords");
 const deasync = require("deasync");
 let ret: any = null;
-const request = require("request");
-const analyze = require("schenkerian");
+var request = require("request");
+const analyze = require('schenkerian')
 // const toString=(node:any, separator = ""):string=> {
 //     let index = -1;
 //     /** @type {Array.<Node>} */
@@ -42,9 +42,9 @@ const analyze = require("schenkerian");
 //     if (err) throw err;
   
 //     const returnList:Array<string> = [];
-// file.data.keywords.forEach(function(keyword: { matches: { node: any }[] }) {
-//     returnList.push(toString(keyword.matches[0].node));
-// });
+    // file.data.keywords.forEach(function(keyword: { matches: { node: any }[] }) {
+    //     returnList.push(toString(keyword.matches[0].node));
+    // });
     
 //     ret = returnList.filter(Boolean);
 // }

@@ -40,8 +40,8 @@ server.post<{ Body: { text: string, url:string } }>(
     },
     async (request) => {
 
-        const { text,url } = request.body;
-        const keyworda:Array<string> = await keywords(url);
+        let { text,url } = request.body;
+        let keyworda:Array<string> = await keywords(url);
         if(keyworda?.length>=1){
             return {
                 keywords: keyworda,
