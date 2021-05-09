@@ -3,8 +3,8 @@
 // const keywords = require("retext-keywords");
 const deasync = require("deasync");
 let ret: any = null;
-var request = require("request");
-const analyze = require('schenkerian')
+const request = require("request");
+const analyze = require("schenkerian");
 // const toString=(node:any, separator = ""):string=> {
 //     let index = -1;
 //     /** @type {Array.<Node>} */
@@ -42,9 +42,9 @@ const analyze = require('schenkerian')
 //     if (err) throw err;
   
 //     const returnList:Array<string> = [];
-    // file.data.keywords.forEach(function(keyword: { matches: { node: any }[] }) {
-    //     returnList.push(toString(keyword.matches[0].node));
-    // });
+// file.data.keywords.forEach(function(keyword: { matches: { node: any }[] }) {
+//     returnList.push(toString(keyword.matches[0].node));
+// });
     
 //     ret = returnList.filter(Boolean);
 // }
@@ -67,10 +67,10 @@ export default (input: string) =>
     //     .process(input.trim(), done);
     ret = null;
     request({uri:input.trim()}, 
-    function(error:any, response:any, body:any) {
-    if (error) return [];
-    analyze({url:input.trim(),"body":body}).then(function(result: any){done(result);})
-    });
+        function(error:any, response:any, body:any) {
+            if (error) return [];
+            analyze({url:input.trim(),"body":body}).then(function(result: any){done(result);});
+        });
     while(ret == null)
     {
         deasync.runLoopOnce();
