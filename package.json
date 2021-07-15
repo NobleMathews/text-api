@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "deasync": "^0.1.21",
+        "dotenv": "^9.0.2",
         "fastify": "^3.4.1",
         "fastify-cors": "^6.0.1",
         "fs": "0.0.1-security",
